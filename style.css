@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #222;
+}
+
+/*Container*/
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "header header"
+        "main-img sidebar"
+        "main-article sidebar"
+        "bottom bottom";
+    gap: 20px;
+}
+
+/*Open Header style*/
+header {
+    grid-area: header;
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+header p {
+    font-size: 12px;
+    color: #555;
+    margin-top: 6px;
+
+}
+
+/*Close header style*/
+/*Main*/
+.main-img img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+/*Sidebar open style*/
+}
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+} 
+.sidebar .theissue {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fafafa;
+}
+.sidebar .theissue h3 {
+    margin-top: 0;
+    font-size: 16px;
+} 
+.sidebar .theissue ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+.sidebar .theissue li {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+/*Sidebar close style*/
+/* Editor's Note */
+.sidebar .EN {
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Main Article Styles */
+.MA {
+    grid-area: main-article;
+}
+.MA h2 {
+    font-size: 22px;
+    margin-top: 10px;
+}
+.MA p {
+    line-height: 1.6;
+    color: #444;
+}
+/*Close main article styles*/
+/* Middle Section Styles */
+.BS {
+    grid-area: bottom;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.BS .C {
+    border: 1px solid #ccc;
+    background-color: white;
+}
+.BS .C img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+.BS .C h3 {
+    margin: 10px;
+    font-size: 16px;
+}
+.BS .C p {
+    margin: 0 10px 10px 10px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Card = C and L = Large */
+.BS .C.L {
+    grid-column: span 2;
+}
+
+/*Middle Section/Quote Style*/
+.BS .quote {
+    background-color: #f7d9d9;
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
